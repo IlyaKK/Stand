@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mai.ui.PulseSignalController">
+
+    <children>
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox>
+                    <children>
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Введите значение угла">
+                            <VBox.margin>
+                                <Insets left="10.0" top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TextField fx:id="angleTextField">
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" top="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Введите Kp">
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TextField fx:id="kpTextField">
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" top="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Label text="Введите Ki">
+                            <VBox.margin>
+                                <Insets left="10.0" top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TextField fx:id="kiTextField" layoutX="20.0" layoutY="43.0">
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" top="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Label layoutX="20.0" layoutY="84.0" text="Введите Kd">
+                            <VBox.margin>
+                                <Insets left="10.0" top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TextField fx:id="kdTextField" layoutX="20.0" layoutY="107.0">
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" top="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                  <AnchorPane>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="5.0" />
+                     </VBox.margin>
+                     <children>
+                        <CheckBox fx:id="loadCheckBox" alignment="CENTER_RIGHT" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefWidth="200.0" text="Нагрузка" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane fx:id="loadScrollPane" prefHeight="200.0" prefWidth="230.0" visible="false" VBox.vgrow="ALWAYS">
+                     <content>
+                        <AnchorPane fx:id="loadAnchorPane" minHeight="0.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane minHeight="50.0" prefHeight="0.0" prefWidth="0.0">
+                                       <children>
+                                          <Label alignment="CENTER" lineSpacing="2.0" text="Коэффициенты ПИД регулятора имитатора" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font name="Arial Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </AnchorPane>
+                                    <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Введите Kp" />
+                                    <TextField fx:id="kpImitatorTextField" />
+                                    <Label text="Введите Ki" />
+                                    <TextField fx:id="kiImitatorTextField" />
+                                    <Label text="Введите Kd" />
+                                    <TextField fx:id="kdImitatorTextField" />
+                                    <AnchorPane>
+                                       <children>
+                                          <Label alignment="CENTER" text="Коэффициенты Mтр" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <font>
+                                                <Font name="Arial Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </AnchorPane>
+                                    <Label text="Введите Jн">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="j_nTextField">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Label text="Введите Kвт">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="k_vtTextField">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Label text="Введите Kш">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="k_shTextField">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Label text="Введите Jдв_им">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="j_dv_imTextField">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Label text="Введите q _им" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets bottom="3.0" top="3.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="q_imTextField">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Label text="Введите Ce_им">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="ce_imTextField">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" />
+                           </padding>
+                        </AnchorPane>
+                     </content>
+                     <VBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </VBox.margin>
+                  </ScrollPane>
+                    </children>
+                </VBox>
+                <VBox prefHeight="200.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <LineChart fx:id="graphLinePulseSignal" VBox.vgrow="ALWAYS">
+                            <xAxis>
+                                <NumberAxis side="BOTTOM" fx:id="xAxis" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis fx:id="yAxis" side="LEFT" />
+                            </yAxis>
+                        </LineChart>
+                  <LineChart fx:id="graphLineMoment" VBox.vgrow="ALWAYS">
+                    <xAxis>
+                      <NumberAxis fx:id="tMomentSignalAxis" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="momentMomentSignalAxis" side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <AnchorPane>
+                     <children>
+                        <Button fx:id="saveResultButton" mnemonicParsing="false" text="Сохранить результат" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                <Button fx:id="stopButton" mnemonicParsing="false"  text="Стоп" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="5.0" />
+                                <Button fx:id="submitButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Старт" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </AnchorPane>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+
+</AnchorPane>
