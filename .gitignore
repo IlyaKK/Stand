@@ -1,2 +1,5 @@
 # Project exclude paths
 /target/
+/1.txt
+/tempExperiment.png
+/.idea/
