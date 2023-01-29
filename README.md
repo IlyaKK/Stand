@@ -7,4 +7,4 @@
 ![image](https://user-images.githubusercontent.com/43324144/215357063-4ecf1da5-eafa-4570-a0dc-f5af8f2ef615.png)
 
 Связанный проект:
-https://github.com/IlyaKK/StandEmbaded
+https://github.com/IlyaKK/StandEmbedded
